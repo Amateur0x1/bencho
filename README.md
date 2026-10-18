@@ -17,7 +17,7 @@
 
 <p align="center">Sponsored by</p>
 
-<p align="center"><a href="https://mobbin.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/sponsor-mobbin-dark.png"><img src="assets/readme/sponsor-mobbin.png" alt="Mobbin" width="180"></picture></a></p>
+<p align="center"><a href="https://mobbin.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/sponsor-mobbin-dark.png"><img src="assets/readme/sponsor-mobbin.png" alt="Mobbin" width="140"></picture></a></p>
 
 ## Take a block
 
