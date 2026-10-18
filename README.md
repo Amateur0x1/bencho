@@ -1,4 +1,6 @@
-<p align="center"><a href="https://bencho.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lockup-dark.png"><img src="assets/readme/lockup.png" alt="bencho.dev" width="340"></picture></a></p>
+<br>
+
+<p align="center"><a href="https://bencho.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lockup-dark.png"><img src="assets/readme/lockup.png" alt="bencho.dev" width="220"></picture></a></p>
 
 <p align="center">Interactive React blocks and interface sounds.<br><strong>40 blocks and 24 sounds</strong>, free and MIT licensed.</p>
 
@@ -8,6 +10,8 @@
   <a href="https://bencho.dev/mcp"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/pill-mcp-dark.svg"><img src="assets/readme/pill-mcp.svg" alt="MCP" height="34"></picture></a>
   <a href="https://bencho.dev/pricing"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/pill-pro-dark.svg"><img src="assets/readme/pill-pro.svg" alt="Pro" height="34"></picture></a>
 </p>
+
+<br>
 
 <a href="https://bencho.dev"><img src="assets/readme/hero.png" alt="A wall of Bencho blocks" width="100%" /></a>
 
