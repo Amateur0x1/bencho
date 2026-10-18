@@ -1,6 +1,6 @@
 <p align="center"><a href="https://bencho.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lockup-dark.png"><img src="assets/readme/lockup.png" alt="bencho.dev" width="480"></picture></a></p>
 
-<p align="center">Interactive React blocks and interface sounds. Every one is live on <a href="https://bencho.dev">bencho.dev</a>, where you can drag it, press it and turn its knobs. This repository is the free shelf: <strong>40 blocks and 24 sounds, MIT</strong>, yours to take.</p>
+<p align="center">Interactive React blocks and interface sounds.<br><strong>40 blocks and 24 sounds</strong>, free and MIT licensed.</p>
 
 <p align="center">
   <a href="https://bencho.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/pill-blocks-dark.svg"><img src="assets/readme/pill-blocks.svg" alt="Blocks" height="34"></picture></a>
