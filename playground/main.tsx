@@ -2,6 +2,8 @@ import { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "../tokens.css";
 import "./playground.css";
+import { WakeSlider as B_wake_slider } from "../blocks/wake-slider/WakeSlider";
+import "../blocks/wake-slider/WakeSlider.css";
 import { StackedBars as B_stacked_bars } from "../blocks/stacked-bars/StackedBars";
 import "../blocks/stacked-bars/StackedBars.css";
 import { ToastStack as B_toast_stack } from "../blocks/toast-stack/ToastStack";
@@ -85,6 +87,7 @@ import "../blocks/liq-create/Create.css";
 import { play, SOUND_NAMES } from "../sounds/sounds";
 
 const BLOCKS = [
+  { id: "wake-slider", title: "Wake slider", el: <B_wake_slider /> },
   { id: "stacked-bars", title: "Stacked bars", el: <B_stacked_bars /> },
   { id: "toast-stack", title: "Toast stack", el: <B_toast_stack /> },
   { id: "folding-bill", title: "Folding bill", el: <B_folding_bill /> },

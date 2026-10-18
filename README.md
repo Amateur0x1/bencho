@@ -2,7 +2,7 @@
 
 <p align="center"><a href="https://bencho.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/brand-dark.png"><img src="assets/readme/brand.png" alt="bencho.dev" width="240"></picture></a></p>
 
-<p align="center">Interactive React blocks and interface sounds.<br><strong>40 blocks and 24 sounds</strong>, free and MIT licensed.</p>
+<p align="center">Interactive React blocks and interface sounds.<br><strong>41 blocks and 24 sounds</strong>, free and MIT licensed.</p>
 
 <p align="center">
   <a href="https://bencho.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/pill-blocks-dark.svg"><img src="assets/readme/pill-blocks.svg" alt="Blocks" height="34"></picture></a>
@@ -64,6 +64,12 @@ The playground puts every block and sound on one page.
 
 ## The shelf
 
+### Slide
+
+- **[Wake slider](blocks/wake-slider)** — A range made of thin bars with no thumb; drag fast and the bars you sweep past spring up in a wake behind the hand. [Try it](https://bencho.dev/blocks/wake-slider)
+- **[Time scrubber](blocks/time-scrubber)** — Drag the ruler to set a time; fling it and it coasts to the nearest step. [Try it](https://bencho.dev/blocks/time-scrubber)
+- **[Slosh slider](blocks/slosh)** — A slider whose fill has weight: drag fast and it sloshes past the handle. [Try it](https://bencho.dev/blocks/slosh)
+
 ### Hover
 
 - **[Stacked bars](blocks/stacked-bars)** — A month of visits as stacked bars; run along them and one day is ringed while a tooltip glides beside it, and Day / Week regrows the bars. [Try it](https://bencho.dev/blocks/stacked-bars)
@@ -104,11 +110,6 @@ The playground puts every block and sound on one page.
 - **[Now playing](blocks/sound)** — A now-playing bar that opens into a full player and folds back as one. [Try it](https://bencho.dev/blocks/sound)
 - **[Search](blocks/seek)** — Press the search icon and it opens into the field as one object. [Try it](https://bencho.dev/blocks/seek)
 - **[Create menu](blocks/liq-create)** — Press the pill and it spreads into the create menu it was all along. [Try it](https://bencho.dev/blocks/liq-create)
-
-### Slide
-
-- **[Time scrubber](blocks/time-scrubber)** — Drag the ruler to set a time; fling it and it coasts to the nearest step. [Try it](https://bencho.dev/blocks/time-scrubber)
-- **[Slosh slider](blocks/slosh)** — A slider whose fill has weight: drag fast and it sloshes past the handle. [Try it](https://bencho.dev/blocks/slosh)
 
 ### Type
 
