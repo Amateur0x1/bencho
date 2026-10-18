@@ -1,6 +1,6 @@
 <br>
 
-<p align="center"><a href="https://bencho.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/logo-dark.png"><img src="assets/readme/logo.png" alt="bencho.dev" width="240"></picture></a></p>
+<p align="center"><a href="https://bencho.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/mark-dark.png"><img src="assets/readme/mark.png" alt="bencho.dev" width="240"></picture></a></p>
 
 <p align="center">Interactive React blocks and interface sounds.<br><strong>40 blocks and 24 sounds</strong>, free and MIT licensed.</p>
 
