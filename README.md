@@ -1,6 +1,4 @@
-<a href="https://bencho.dev"><img src="assets/readme/hero.png" alt="A wall of Bencho blocks" width="100%" /></a>
-
-# Bencho
+<a href="https://bencho.dev"><img src="assets/readme/hero.png" alt="bencho.dev, above a wall of its blocks" width="100%" /></a>
 
 Interactive React blocks and interface sounds. Every one is live on [bencho.dev](https://bencho.dev), where you can drag it, press it and turn its knobs. This repository is the free shelf: **40 blocks and 24 sounds, MIT**, yours to take.
 
