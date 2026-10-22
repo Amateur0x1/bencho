@@ -1,4 +1,4 @@
-import { StrictMode, useState } from "react";
+import { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "../tokens.css";
 import "./playground.css";
@@ -132,8 +132,17 @@ const BLOCKS = [
 
 function App() {
   const [dark, setDark] = useState(false);
+
+  /* the theme goes on <html>: tokens.css keys its dark rules and
+     its system-setting media query on the root element, so a
+     data-theme parked on a div leaves the light values with no
+     rule to come back to */
+  useEffect(() => {
+    document.documentElement.dataset.theme = dark ? "dark" : "light";
+  }, [dark]);
+
   return (
-    <div className="pg" data-theme={dark ? "dark" : "light"}>
+    <div className="pg">
       <header className="pg-head">
         <h1>Bencho, free blocks</h1>
         <button onClick={() => setDark((d) => !d)}>{dark ? "Light" : "Dark"}</button>
