@@ -1,4 +1,4 @@
-import { StrictMode, useState } from "react";
+import { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "../tokens.css";
 import "./playground.css";
@@ -131,9 +131,14 @@ const BLOCKS = [
 ];
 
 function App() {
-  const [dark, setDark] = useState(false);
+  /* starts on the system's choice; the button then picks one outright */
+  const [dark, setDark] = useState(() => matchMedia("(prefers-color-scheme: dark)").matches);
+  /* on <html>, where tokens.css and the blocks that watch the theme read it */
+  useEffect(() => {
+    document.documentElement.dataset.theme = dark ? "dark" : "light";
+  }, [dark]);
   return (
-    <div className="pg" data-theme={dark ? "dark" : "light"}>
+    <div className="pg">
       <header className="pg-head">
         <h1>Bencho, free blocks</h1>
         <button onClick={() => setDark((d) => !d)}>{dark ? "Light" : "Dark"}</button>
