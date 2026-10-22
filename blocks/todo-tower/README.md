@@ -28,7 +28,7 @@ Every prop is optional and defaults to what the block ships with on bencho.dev.
 | Prop | Knob | Default | Range | What it does |
 | --- | --- | --- | --- | --- |
 | `gravity` | Gravity | `50` | 0–100 | how hard it falls |
-| `count` | Todos | `6` | 3–undefined |  |
+| `count` | Todos | `6` | 3–8 |  |
 | `slip` | Slip | `45` | 0–100 | how crooked it stacks, and how far a card skates |
 
 ## Tokens it reads

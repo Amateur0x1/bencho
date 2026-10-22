@@ -27,7 +27,7 @@ Every prop is optional and defaults to what the block ships with on bencho.dev.
 | --- | --- | --- | --- | --- |
 | `wake` | Wake | `100` | 0–100 | how far back the ripple runs |
 | `pace` | Pace | `3` | 1–6 s | seconds a step takes to fill |
-| `steps` | Steps | `5` | undefined–undefined |  |
+| `steps` | Steps | `5` | 3–8 |  |
 
 ## Tokens it reads
 
