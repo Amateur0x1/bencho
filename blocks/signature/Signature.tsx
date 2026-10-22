@@ -25,6 +25,11 @@ import { Check } from "lucide-react";
    follow the Fill control without being told to repaint; an
    SVG is crisp at any scale and its ink is currentColor. */
 
+/* the pen lifts: the ink softens this soon after, and the pad folds
+   away at FOLD_MS if the pen has not come back. A new stroke in
+   between brings the ink straight back to full strength */
+const SOFT_MS = 220;
+const FOLD_MS = 1500;
 const W = 300;
 const H = 180;
 /* where the line is, in the block's own pixels */
@@ -87,6 +92,9 @@ export function Signature({
   const redraw = () => setV((v) => v + 1);
   const [cut, setCut] = useState<number | null>(null);
   const [signed, setSigned] = useState(false);
+  /* the beat between: the pause has said it is done, the ink has
+     softened to a tint, and the pad has not yet folded away */
+  const [settled, setSettled] = useState(false);
   const down = useRef(false);
   const last = useRef({ x: 0, y: 0, t: 0, w: 0 });
   const later = useRef(0);
@@ -94,7 +102,9 @@ export function Signature({
   const knobs = useRef({ pen, smooth, rewind });
   knobs.current = { pen, smooth, rewind };
 
+  const fold = useRef(0);
   useEffect(() => () => {
+    clearTimeout(fold.current);
     clearTimeout(later.current);
     cancelAnimationFrame(raf.current);
   }, []);
@@ -122,7 +132,10 @@ export function Signature({
     try { e.currentTarget.setPointerCapture(e.pointerId); } catch { /* a scripted pointer */ }
     down.current = true;
     clearTimeout(later.current);
+    clearTimeout(fold.current);
     setSigned(false);
+    /* pen back on the pad before it folded: the ink comes back too */
+    setSettled(false);
     const p = local(e);
     const { thin, thick } = widths();
     const w = (thin + thick) / 2;
@@ -158,18 +171,25 @@ export function Signature({
     if (!down.current) return;
     down.current = false;
     clearTimeout(later.current);
-    /* a pause after the last stroke is what signing IS */
+    clearTimeout(fold.current);
+    fold.current = window.setTimeout(() => {
+      if (!down.current && strokes.current.length) setSettled(true);
+    }, SOFT_MS);
     later.current = window.setTimeout(() => {
       if (!down.current && strokes.current.length) {
+        /* a pause after the last stroke is what signing IS: the
+           softened ink shrinks away as the pad folds into the pill */
         setSigned(true);
       }
-    }, 1500);
+    }, FOLD_MS);
   };
 
   const clear = () => {
     if (!inked || rewinding) return;
     clearTimeout(later.current);
+    clearTimeout(fold.current);
     setSigned(false);
+    setSettled(false);
     const n = total;
     const per = 2 + ((100 - clamp(knobs.current.rewind, 0, 100)) / 100) * 8;
     const dur = clamp(n * per, 350, 2400);
@@ -192,6 +212,7 @@ export function Signature({
   const again = () => {
     strokes.current = [];
     setSigned(false);
+    setSettled(false);
   };
 
   /* draw up to the cut, stroke by stroke */
@@ -215,7 +236,8 @@ export function Signature({
       ref={pad}
       className="sig"
       data-ink={ink}
-      data-inked={(inked && !rewinding && !signed) || undefined}
+      data-inked={(inked && !rewinding && !signed && !settled) || undefined}
+      data-settled={(settled || signed) || undefined}
       data-signed={signed || undefined}
       style={{
         /* width and height, never a scale: the corner has to stay
@@ -255,7 +277,7 @@ export function Signature({
       <button
         type="button"
         className="sig-clear"
-        tabIndex={inked && !rewinding && !signed ? 0 : -1}
+        tabIndex={inked && !rewinding && !signed && !settled ? 0 : -1}
         onPointerDown={(e) => e.stopPropagation()}
         onClick={clear}
       >

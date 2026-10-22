@@ -123,7 +123,23 @@ export function LabelInput({
           id={id}
           className="lbi-field"
           data-flip={flip % 2}
-          type={secret && !show ? "password" : secret ? "text" : "email"}
+          /* ── no autofill, when it is only being shown ───────
+             An email or password box is an invitation: the browser
+             drops its saved addresses under it, a password manager
+             pins its badge in it, the phone offers a contact. On
+             the bench it is a preview, not a form, so it is a plain
+             text field — a hidden password masked by the font
+             rather than by the type — named so Safari takes it for
+             a search, and marked off for the managers that read
+             their own attribute. A real use keeps the real types. */
+          type={showcase ? "text" : secret && !show ? "password" : secret ? "text" : "email"}
+          name={showcase ? "search-preview" : undefined}
+          data-1p-ignore={showcase || undefined}
+          data-lpignore={showcase ? "true" : undefined}
+          data-bwignore={showcase || undefined}
+          data-form-type={showcase ? "other" : undefined}
+          autoCorrect="off"
+          autoCapitalize="off"
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onFocus={() => setFocus(true)}
@@ -139,7 +155,10 @@ export function LabelInput({
              keyboard. A mouse and a hardware keyboard are
              untouched, and so is any real use of this field. */
           inputMode={quiet ? "none" : undefined}
-          style={{ paddingRight: secret ? 48 : lx }}
+          style={{
+            paddingRight: secret ? 48 : lx,
+            ...(showcase && secret && !show ? { WebkitTextSecurity: "disc" } : {}),
+          } as React.CSSProperties}
         />
 
         {secret && (

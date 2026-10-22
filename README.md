@@ -2,7 +2,7 @@
 
 <p align="center"><a href="https://bencho.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/brand-dark.png"><img src="assets/readme/brand.png" alt="bencho.dev" width="240"></picture></a></p>
 
-<p align="center">Interactive React blocks and interface sounds.<br><strong>41 blocks and 24 sounds</strong>, free and MIT licensed.</p>
+<p align="center">Interactive React blocks and interface sounds.<br><strong>44 blocks and 24 sounds</strong>, free and MIT licensed.</p>
 
 <p align="center">
   <a href="https://bencho.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/pill-blocks-dark.svg"><img src="assets/readme/pill-blocks.svg" alt="Blocks" height="34"></picture></a>
@@ -64,14 +64,9 @@ The playground puts every block and sound on one page.
 
 ## The shelf
 
-### Slide
-
-- **[Wake slider](blocks/wake-slider)** — A range made of thin bars with no thumb; drag fast and the bars you sweep past spring up in a wake behind the hand. [Try it](https://bencho.dev/blocks/wake-slider)
-- **[Time scrubber](blocks/time-scrubber)** — Drag the ruler to set a time; fling it and it coasts to the nearest step. [Try it](https://bencho.dev/blocks/time-scrubber)
-- **[Slosh slider](blocks/slosh)** — A slider whose fill has weight: drag fast and it sloshes past the handle. [Try it](https://bencho.dev/blocks/slosh)
-
 ### Hover
 
+- **[ASCII wake](blocks/ascii-wake)** — A cube drawn in ink dots: the pointer drags a wake of characters through it that thicken under the hand and cool back to dots behind it, and a press sends a ring out. [Try it](https://bencho.dev/blocks/ascii-wake)
 - **[Stacked bars](blocks/stacked-bars)** — A month of visits as stacked bars; run along them and one day is ringed while a tooltip glides beside it, and Day / Week regrows the bars. [Try it](https://bencho.dev/blocks/stacked-bars)
 - **[Toast stack](blocks/toast-stack)** — Three toasts stacked at the edge, the two behind peeking out above the front one; point at them and they spring apart into a list. [Try it](https://bencho.dev/blocks/toast-stack)
 - **[Emoji reactions](blocks/emoji-reactions)** — Press the button and the message turns into a pill of emoji; pick one and it flies down to its reaction chip as the count rolls up. [Try it](https://bencho.dev/blocks/emoji-reactions)
@@ -84,8 +79,14 @@ The playground puts every block and sound on one page.
 - **[Escape button](blocks/escape)** — A button that slides away from your cursor, and then gives up. [Try it](https://bencho.dev/blocks/escape)
 - **[Tilt card](blocks/tilt)** — A photo card that sinks under your pointer instead of rising to meet it. [Try it](https://bencho.dev/blocks/tilt)
 
+### Swipe
+
+- **[Card swap](blocks/card-swap)** — A stack of photo cards in depth: press the front card or fling it and it goes straight to the back while the rest step forward, or switch Auto on to have it swap by itself. [Try it](https://bencho.dev/blocks/card-swap)
+- **[Carousel](blocks/carousel)** — Cards on a turntable that drift, lean under your pointer and swipe round. [Try it](https://bencho.dev/blocks/carousel)
+
 ### Drag
 
+- **[Rolling counter](blocks/rolling-counter)** — A number between a minus and a plus whose digits roll like an odometer, carrying column by column: tap, hold to speed up, or drag the number and fling it. [Try it](https://bencho.dev/blocks/rolling-counter)
 - **[Folding bill](blocks/folding-bill)** — A bill you can grab, drag and fold; plain or with the dollar print. [Try it](https://bencho.dev/blocks/folding-bill)
 - **[Image compare](blocks/image-compare)** — Drag the line to compare two pictures; flick it and it glides to the edge. [Try it](https://bencho.dev/blocks/image-compare)
 - **[Signature pad](blocks/signature)** — Sign it; the ink thins with speed, and Clear rewinds it stroke by stroke. [Try it](https://bencho.dev/blocks/signature)
@@ -94,6 +95,12 @@ The playground puts every block and sound on one page.
 - **[Slide to confirm](blocks/slide-confirm)** — Push the handle across; past the mark it takes over and finishes itself. [Try it](https://bencho.dev/blocks/slide-confirm)
 - **[Pull to refresh](blocks/pull)** — Pull the card down and it stretches; let go past the line to refresh. [Try it](https://bencho.dev/blocks/pull)
 - **[Dragging ball](blocks/drag-ball)** — A ball you grab: it swells under the pointer and squeezes as you hold it. [Try it](https://bencho.dev/blocks/drag-ball)
+
+### Slide
+
+- **[Wake slider](blocks/wake-slider)** — A range made of thin bars with no thumb; drag fast and the bars you sweep past spring up in a wake behind the hand. [Try it](https://bencho.dev/blocks/wake-slider)
+- **[Time scrubber](blocks/time-scrubber)** — Drag the ruler to set a time; fling it and it coasts to the nearest step. [Try it](https://bencho.dev/blocks/time-scrubber)
+- **[Slosh slider](blocks/slosh)** — A slider whose fill has weight: drag fast and it sloshes past the handle. [Try it](https://bencho.dev/blocks/slosh)
 
 ### Press
 
@@ -122,13 +129,9 @@ The playground puts every block and sound on one page.
 - **[Assignees](blocks/picker)** — Assign people from a list and their faces stack up in the pill. [Try it](https://bencho.dev/blocks/picker)
 - **[Aspect ratio](blocks/aspect)** — Switch the crop between 4:3, 1:1 and 3:4, keeping the same area each time. [Try it](https://bencho.dev/blocks/aspect)
 
-### Swipe
-
-- **[Carousel](blocks/carousel)** — Cards on a turntable that drift, lean under your pointer and swipe round. [Try it](https://bencho.dev/blocks/carousel)
-
 ## The rest of the bench
 
-This is a selection. [Bencho Pro](https://bencho.dev/pricing) opens all 120+ blocks and 130+ sounds, with full source, sound layering and downloads, an unlimited Bench to arrange them on, and the [Bencho MCP](https://bencho.dev/mcp) for Claude Code, Cursor and Codex. Everything added later comes with it.
+This is a selection. [Bencho Pro](https://bencho.dev/pricing) opens all 130+ blocks and 130+ sounds, with full source, sound layering and downloads, an unlimited Bench to arrange them on, and the [Bencho MCP](https://bencho.dev/mcp) for Claude Code, Cursor and Codex. Everything added later comes with it.
 
 ## Licence
 

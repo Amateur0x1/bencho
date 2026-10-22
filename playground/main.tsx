@@ -2,6 +2,12 @@ import { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "../tokens.css";
 import "./playground.css";
+import { AsciiWake as B_ascii_wake } from "../blocks/ascii-wake/AsciiWake";
+import "../blocks/ascii-wake/AsciiWake.css";
+import { CardSwap as B_card_swap } from "../blocks/card-swap/CardSwap";
+import "../blocks/card-swap/CardSwap.css";
+import { Counter as B_rolling_counter } from "../blocks/rolling-counter/Counter";
+import "../blocks/rolling-counter/Counter.css";
 import { WakeSlider as B_wake_slider } from "../blocks/wake-slider/WakeSlider";
 import "../blocks/wake-slider/WakeSlider.css";
 import { StackedBars as B_stacked_bars } from "../blocks/stacked-bars/StackedBars";
@@ -87,6 +93,9 @@ import "../blocks/liq-create/Create.css";
 import { play, SOUND_NAMES } from "../sounds/sounds";
 
 const BLOCKS = [
+  { id: "ascii-wake", title: "ASCII wake", el: <B_ascii_wake /> },
+  { id: "card-swap", title: "Card swap", el: <B_card_swap /> },
+  { id: "rolling-counter", title: "Rolling counter", el: <B_rolling_counter /> },
   { id: "wake-slider", title: "Wake slider", el: <B_wake_slider /> },
   { id: "stacked-bars", title: "Stacked bars", el: <B_stacked_bars /> },
   { id: "toast-stack", title: "Toast stack", el: <B_toast_stack /> },

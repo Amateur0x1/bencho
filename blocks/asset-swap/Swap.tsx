@@ -151,6 +151,18 @@ const units = (n: number, c: Coin) =>
   n.toLocaleString("en-US", { minimumFractionDigits: MONEY.includes(c) ? c.dp : 0, maximumFractionDigits: c.dp });
 const usd = (n: number) => n.toLocaleString("en-US", { style: "currency", currency: "USD" });
 
+/* a coin's mark on its own, by symbol: other blocks wear the same
+   marks (the prediction card's HYPE market) rather than a second copy */
+export function CoinMark({ sym, size = 32, className }: { sym: string; size?: number; className?: string }) {
+  const coin = COINS.find((c) => c.sym === sym);
+  if (!coin) return null;
+  return (
+    <svg className={className} viewBox="0 0 32 32" width={size} height={size} aria-hidden="true">
+      {coin.logo}
+    </svg>
+  );
+}
+
 function Logo({ coin, size }: { coin: Coin; size: number }) {
   return (
     <svg className="swp-logo" viewBox="0 0 32 32" width={size} height={size} aria-hidden="true">

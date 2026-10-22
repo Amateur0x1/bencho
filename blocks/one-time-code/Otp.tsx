@@ -414,6 +414,12 @@ export function Otp({
           onPointerDown={(e) => { if (phase === "ok") { e.preventDefault(); reopen(); } }}
           inputMode="numeric"
           autoComplete="one-time-code"
+          /* a code box is not a login: keep the password managers'
+             badges out of it, the way each of them asks */
+          data-1p-ignore
+          data-lpignore="true"
+          data-bwignore
+          data-form-type="other"
           maxLength={n}
           aria-label={phase === "ok" ? "Verified. Press to enter a new code" : `${n}-digit code`}
           spellCheck={false}

@@ -1,9 +1,12 @@
 # Blocks
 
-41 free blocks. Each folder holds the component, its stylesheet and a README with its props.
+44 free blocks. Each folder holds the component, its stylesheet and a README with its props.
 
 | Block | Folder | Packages |
 | --- | --- | --- |
+| [ASCII wake](ascii-wake) | `ascii-wake/AsciiWake.tsx` | — |
+| [Card swap](card-swap) | `card-swap/CardSwap.tsx` | — |
+| [Rolling counter](rolling-counter) | `rolling-counter/Counter.tsx` | `lucide-react` |
 | [Wake slider](wake-slider) | `wake-slider/WakeSlider.tsx` | — |
 | [Stacked bars](stacked-bars) | `stacked-bars/StackedBars.tsx` | `framer-motion` |
 | [Toast stack](toast-stack) | `toast-stack/ToastStack.tsx` | `framer-motion` `lucide-react` |

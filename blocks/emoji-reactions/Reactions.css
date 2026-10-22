@@ -93,6 +93,16 @@
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--signal, #2231dd) 35%, transparent);
   color: var(--signal, #2231dd);}
 
+/* the signal blue is too deep on a dark chip: a lighter blue there */
+[data-theme="dark"] .rxn-chip[data-mine],
+[data-fill="dark"] .rxn-chip[data-mine] {
+  color: #8c9bff;
+  box-shadow: inset 0 0 0 1px rgba(140, 155, 255, 0.4);}
+
+[data-theme="dark"] [data-fill="light"] .rxn-chip[data-mine] {
+  color: var(--signal, #2231dd);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--signal, #2231dd) 35%, transparent);}
+
 .rxn-chip-e { font-size: 20px; line-height: 1; transition: opacity 160ms ease; letter-spacing: -0.02em; }
 
 .rxn-chip-e[data-landing] { opacity: 0; }
